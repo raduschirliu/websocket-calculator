@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+      "target": "es2019",
+      "module": "none",
+      "moduleResolution": "node",
+      "esModuleInterop": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "inlineSourceMap": true,
+      "outDir": "dist"
+    },
+    "include": [
+      "src/**/*.ts",
+    ],
+    "exclude": [
+      "node_modules"
+    ]
+  }
