@@ -18,6 +18,7 @@ export interface IHistoryItem {
 }
 
 const CONNECTION_STRING = process.env.REACT_APP_WS_URL || 'ws://localhost:8080';
+const MAX_LENGTH = 50;
 const CalculatorContext = React.createContext<ICalculatorContext>(null as any);
 
 export const CalculatorProvider = ({ children }: { children: any }) => {
@@ -72,7 +73,9 @@ export const CalculatorProvider = ({ children }: { children: any }) => {
   };
 
   const append = (str: string) => {
-    setCalcString(calcString + str);
+    if ((str + calcString).length <= MAX_LENGTH) {
+      setCalcString(calcString + str);
+    }
   };
 
   const clear = () => {
