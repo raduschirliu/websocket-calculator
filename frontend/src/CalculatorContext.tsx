@@ -47,9 +47,10 @@ export const CalculatorProvider = ({ children }: { children: any }) => {
       setStatus('Disconnected');
       
       setTimeout(() => {
+        console.log('Reconnecting');
         setStatus('Connecting...');
         setWs(new WebSocket(CONNECTION_STRING));
-      });
+      }, 500);
     });
 
     ws.addEventListener('message', (event: MessageEvent) => {
