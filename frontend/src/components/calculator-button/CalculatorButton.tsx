@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import CalculatorContext from '../../CalculatorContext';
+import CalculatorContext from '../../contexts/CalculatorContext';
 import './CalculatorButton.css';
 
 const CalculatorButton = ({

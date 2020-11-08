@@ -1,6 +1,6 @@
 import React from 'react';
 import { useContext } from 'react';
-import CalculatorContext from '../../CalculatorContext';
+import CalculatorContext from '../../contexts/CalculatorContext';
 import './ClearText.css';
 
 const ClearText = () => {

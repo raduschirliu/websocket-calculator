@@ -1,5 +1,5 @@
 import React from 'react';
-import { CalculatorProvider } from '../../CalculatorContext';
+import { CalculatorProvider } from '../../contexts/CalculatorContext';
 import Calculator from '../calculator/Calculator';
 import ClearText from '../clear-text/ClearText';
 import Log from '../log/Log';

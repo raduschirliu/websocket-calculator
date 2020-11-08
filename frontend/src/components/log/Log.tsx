@@ -1,6 +1,6 @@
 import React from 'react';
 import { useContext } from 'react';
-import CalculatorContext, { IHistoryItem } from '../../CalculatorContext';
+import CalculatorContext, { IHistoryItem } from '../../contexts/CalculatorContext';
 import './Log.css';
 
 const Log = () => {
