@@ -1,0 +1,16 @@
+.status-container {
+  width: 60%;
+  margin: 0px auto 17px auto;
+  color: rgba(100, 100, 100, 255);
+  text-align: center;
+}
+
+.status-title {
+  font-size: 25px;
+  margin-bottom: 0px;
+}
+
+.status-text {
+  margin-top: 5px;
+  font-size: 15px;
+}

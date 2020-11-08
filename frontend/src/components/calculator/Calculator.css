@@ -1,15 +1,15 @@
 .calculator-string {
   background-color: rgb(247, 247, 247, 255);
-  line-height: 110px;
-  min-height: 110px;
+  line-height: 80px;
+  height: 110px;
   text-align: end;
 }
 
 .calculator-string p {
-  margin-bottom: 0px;
+  height: 100%;
   margin: 0px 10px 0px 10px;
   font-size: 32px;
-  overflow-y: auto;
+  overflow-x: auto;
 }
 
 .calculator-buttons {

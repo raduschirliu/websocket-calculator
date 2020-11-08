@@ -4,6 +4,7 @@ interface ICalculatorContext {
   children: any;
   history: IHistoryItem[];
   calcString: string;
+  status: string;
   clearHistory: () => void;
   append: (str: string) => void;
   clear: () => void;
@@ -22,9 +23,10 @@ const MAX_LENGTH = 50;
 const CalculatorContext = React.createContext<ICalculatorContext>(null as any);
 
 export const CalculatorProvider = ({ children }: { children: any }) => {
-  const [ws] = useState<WebSocket>(new WebSocket(CONNECTION_STRING));
+  const [ws, setWs] = useState<WebSocket>(new WebSocket(CONNECTION_STRING));
   const [history, setHistory] = useState<IHistoryItem[]>([]);
   const [calcString, setCalcString] = useState<string>('');
+  const [status, setStatus] = useState<string>('Connecting...');
 
   useEffect(() => {
     const localHistory = localStorage.getItem('history');
@@ -36,6 +38,19 @@ export const CalculatorProvider = ({ children }: { children: any }) => {
       });
       setHistory(data);
     }
+
+    ws.addEventListener('open', (event: Event) => {
+      setStatus('Connected');
+    });
+
+    ws.addEventListener('close', (event: CloseEvent) => {
+      setStatus('Disconnected');
+      
+      setTimeout(() => {
+        setStatus('Connecting...');
+        setWs(new WebSocket(CONNECTION_STRING));
+      });
+    });
 
     ws.addEventListener('message', (event: MessageEvent) => {
       if (!event.data) return;
@@ -101,6 +116,7 @@ export const CalculatorProvider = ({ children }: { children: any }) => {
         children,
         history,
         calcString,
+        status,
         clearHistory,
         append,
         clear,

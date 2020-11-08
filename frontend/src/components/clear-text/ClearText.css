@@ -1,0 +1,13 @@
+.clear-text {
+  cursor: pointer;
+  width: 60%;
+  margin: 17px auto 0px auto;
+  color: rgba(100, 100, 100, 255);
+  font-size: 17px;
+  text-align: center;
+  transition: opacity 150ms ease;
+}
+
+.clear-text:hover {
+  opacity: 0.7;
+}
