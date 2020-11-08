@@ -5,3 +5,5 @@ Calculations being made are shared with all current active users of the web app,
   
 Demo can be found [here](https://rs-ws-calculator.netlify.app/), and is hosted on Heroku and Netlify.  
 Instructions on running the frontend & backend are in the `frontend` and `backend` folders.
+
+![Demo](https://i.imgur.com/rtHGtsq.gif)
