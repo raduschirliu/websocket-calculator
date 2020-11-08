@@ -1,0 +1,22 @@
+.app-container {
+  width: 90%;
+  height: 100%;
+  display: grid;
+  margin: auto;
+  margin-top: 10%;
+  grid-template-rows: 50 50%;
+  grid-template-columns: 100%;
+  row-gap: 10px;
+}
+
+@media screen and (min-width: 1000px) {
+  .app-container {
+    width: 80%;
+    max-width: 1200px;
+    min-height: 430px;
+    grid-template-rows: 100%;
+    grid-template-columns: 50% 50%;
+    column-gap: 10px;
+    row-gap: 0px;
+  }
+}

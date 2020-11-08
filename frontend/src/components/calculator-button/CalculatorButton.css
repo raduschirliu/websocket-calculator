@@ -1,0 +1,28 @@
+.calculator-button {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  transition: opacity 150ms ease;
+  min-height: 64px;
+}
+
+.calculator-button-dark {
+  background-color: rgba(90, 90, 90, 255);
+}
+
+.calculator-button-light {
+  background-color: rgba(100, 100, 100, 255);
+}
+
+.calculator-button:hover {
+  opacity: 0.8;
+}
+
+.calculator-button-text {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  text-justify: center;
+  line-height: 64px;
+  color: rgba(247, 247, 247, 255);
+}

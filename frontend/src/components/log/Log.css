@@ -1,0 +1,27 @@
+.log-container {
+  background-color: rgba(247, 247, 247, 255);
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.log-item {
+  cursor: pointer;
+  display: flex;
+  margin: 20px 10px 20px 10px;
+  transition: opacity 150ms ease;
+}
+
+.log-item:hover {
+  opacity: 0.6;
+}
+
+.log-content {
+  flex: 1;
+  margin: 0px;
+}
+
+.log-timestamp {
+  color: rgba(170, 170, 170, 255);
+  margin: 0px;
+}
