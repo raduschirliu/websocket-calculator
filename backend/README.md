@@ -2,6 +2,9 @@
 Backend for the calculator is built using Node.js and TypeScript.  
 It makes use of the `ws` library for the WebSocket Server, as well as `mathjs` to safely parse mathematical expressions.
 
+## Dependencies
+Requires Node.js in order to run and build (has only been tested on Node.js v14.12.0).  
+
 ## Running
 Before running the backend, the following optional environment variables can be set:
 ```bash
@@ -11,7 +14,7 @@ PORT=8080
 # Max length of an expression string to evaluate - defaults to 50 characters
 MAX_LENGTH=50
 ```
-These can also be loaded from a `.env` file placed in the root directory.  
+These can also be loaded from a `.env` file placed in the this directory.  
   
 The frontend can then be started in development mode by running:
 ```bash
