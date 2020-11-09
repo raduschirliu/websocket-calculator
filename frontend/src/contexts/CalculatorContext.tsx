@@ -28,6 +28,7 @@ export const CalculatorProvider = ({ children }: { children: any }) => {
   const [calcString, setCalcString] = useState<string>('');
   const [status, setStatus] = useState<string>('Connecting...');
 
+  // Setup socket on context initialize
   useEffect(() => {
     const localHistory = localStorage.getItem('history');
 
@@ -83,21 +84,25 @@ export const CalculatorProvider = ({ children }: { children: any }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // Clear calculator history
   const clearHistory = () => {
     setHistory([]);
     localStorage.removeItem('history');
   };
 
+  // Append new character to calculator expression
   const append = (str: string) => {
     if ((str + calcString).length <= MAX_LENGTH) {
       setCalcString(calcString + str);
     }
   };
 
+  // Clear calculator expression
   const clear = () => {
     setCalcString('');
   };
 
+  // Send current expression to server for evaluation
   const send = () => {
     if (ws.readyState !== ws.OPEN) return;
     if (!calcString || calcString === '') return;
